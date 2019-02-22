@@ -1,0 +1,571 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-02-21T22:42:50.416Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_18a3aca7bcef4383a8c80bfc9db6c990",
+			"created": 1544888785615,
+			"description": "",
+			"modified": 1544888785615,
+			"name": "OurBooks",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_be053a4fbe2d4089b17f10f892e3aa06",
+			"color": null,
+			"created": 1544888785814,
+			"data": {
+				"base_url": "https://ourbooks-backend-api.herokuapp.com",
+				"base_url_local": "http://127.0.0.1:3333",
+				"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjExLCJpYXQiOjE1NDQ5OTE3NzR9.1yajINWYqZwcNQQkoywiZILYHTdd266fd1fJnJUG8oc"
+			},
+			"isPrivate": false,
+			"metaSortKey": 1544888785814,
+			"modified": 1544991786141,
+			"name": "New Environment",
+			"parentId": "wrk_18a3aca7bcef4383a8c80bfc9db6c990",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_97576622cf394d17841deb75c2f272e4",
+			"cookies": [],
+			"created": 1544888785825,
+			"modified": 1544888785825,
+			"name": "Default Jar",
+			"parentId": "wrk_18a3aca7bcef4383a8c80bfc9db6c990",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_5f1933fd04334eff9af5de252ce9fa93",
+			"created": 1544891624164,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1544891624165,
+			"modified": 1544891624164,
+			"name": "ForgotPassword",
+			"parentId": "wrk_18a3aca7bcef4383a8c80bfc9db6c990",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_6b6eabb0e0fd4572be34edb450c0d6fd",
+			"created": 1544891640351,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1544891640351,
+			"modified": 1544891640351,
+			"name": "Sessions",
+			"parentId": "wrk_18a3aca7bcef4383a8c80bfc9db6c990",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_bcb795e6074b4ec6a81b8988a99385ae",
+			"created": 1544891645593,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1544891645593,
+			"modified": 1544891645593,
+			"name": "Users",
+			"parentId": "wrk_18a3aca7bcef4383a8c80bfc9db6c990",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_91a9e5a5c8024049b086e557da7e4e47",
+			"created": 1544915068834,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1544915068834,
+			"modified": 1544915068834,
+			"name": "Books",
+			"parentId": "wrk_18a3aca7bcef4383a8c80bfc9db6c990",
+			"_type": "request_group"
+		},
+		{
+			"_id": "fld_9f6971cf63964e4e85b122df5de1c114",
+			"created": 1544918043097,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1544903357213.5,
+			"modified": 1544918053347,
+			"name": "Authors",
+			"parentId": "wrk_18a3aca7bcef4383a8c80bfc9db6c990",
+			"_type": "request_group"
+		},
+		{
+			"_id": "req_cbf31b14bea144818a9a7f8f707b99f6",
+			"authentication": {},
+			"body": {},
+			"created": 1544888849492,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1544888849492,
+			"method": "GET",
+			"modified": 1544901842553,
+			"name": "Teste",
+			"parameters": [],
+			"parentId": "wrk_18a3aca7bcef4383a8c80bfc9db6c990",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url  }}/",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f906d96818fa4e518183896f83ba6012",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"pamellasoares@gmail.com\",\n\t\"redirect_url\":\n\t\"http://www.meusistema.com/resetar_senha\"\n}"
+			},
+			"created": 1544891674762,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_20a80d04a6fe47218bda611c5ed3e727",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544890828380,
+			"method": "POST",
+			"modified": 1550714450814,
+			"name": "Create",
+			"parameters": [],
+			"parentId": "fld_5f1933fd04334eff9af5de252ce9fa93",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local }}/passwords",
+			"_type": "request"
+		},
+		{
+			"_id": "req_70233b32c1214cafb738b68c62b62bbe",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"token\": \"c8df\",\n\t\"password\":\"1\",\n\t\"password_confirmation\": \"1\"\n}"
+			},
+			"created": 1544900433383,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_7930e83fc93a4f55b8b129d1b8befaa8",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544890828430,
+			"method": "PUT",
+			"modified": 1550715159903,
+			"name": "Update",
+			"parameters": [],
+			"parentId": "fld_5f1933fd04334eff9af5de252ce9fa93",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local }}/passwords",
+			"_type": "request"
+		},
+		{
+			"_id": "req_64ef653347404fbf93afb3d8f793da55",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"email\": \"pamellasoares@gmail.com\",\n\t\"password\": \"122\"}"
+			},
+			"created": 1544891128098,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_20a80d04a6fe47218bda611c5ed3e727",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544891128098,
+			"method": "POST",
+			"modified": 1550715300124,
+			"name": "Create",
+			"parameters": [],
+			"parentId": "fld_6b6eabb0e0fd4572be34edb450c0d6fd",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local }}/sessions",
+			"_type": "request"
+		},
+		{
+			"_id": "req_65e99fcfe22946d0a622208558761a94",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"username\": \"Pamella\",\n\t\"email\": \"pamellasoares@gmail.com\",\n\t\"password\": \"123456\",\n\t\"password_confirmation\": \"123456\"\n}"
+			},
+			"created": 1544890528662,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_b5d2f3f58f1d473bbae9cd29dabb98b5",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544890528662,
+			"method": "POST",
+			"modified": 1544991763947,
+			"name": "Create",
+			"parameters": [],
+			"parentId": "fld_bcb795e6074b4ec6a81b8988a99385ae",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local }}/users",
+			"_type": "request"
+		},
+		{
+			"_id": "req_634d3525482b4ddd9bbe4a2e3e8db425",
+			"authentication": {
+				"prefix": "",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1544915085560,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1544915085560,
+			"method": "GET",
+			"modified": 1544991813979,
+			"name": "index",
+			"parameters": [],
+			"parentId": "fld_91a9e5a5c8024049b086e557da7e4e47",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local }}/books?page=1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f950c39104f242418c870a143514ee47",
+			"authentication": {
+				"prefix": "",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t \"title\":\"Mitologia Nórdica\",\n   \"description\":\"Uma jornada da origem do universo até o fim do mundo.\",\n   \"type\":\"Mitologia\",\n   \"pagecount\":\"288\",\n   \"point\":\"0\",\n   \"book_cover_url\":\"https://cdn.pbrd.co/images/HRTZk2l.jpg\",\n\t\"authors\":[\n\t\t{\n\t \"name\":\"Neil\",\n   \"surname\":\"Gaiman\",\n\t \"book_id\":\"1\"\n\t\t}\n\t]\n}"
+			},
+			"created": 1544915778335,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_082a3bdf7b2644a496bd38adfc9b91b1",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544915085610,
+			"method": "POST",
+			"modified": 1545095605277,
+			"name": "Create",
+			"parameters": [],
+			"parentId": "fld_91a9e5a5c8024049b086e557da7e4e47",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local }}/books",
+			"_type": "request"
+		},
+		{
+			"_id": "req_18700494a59c408b81e3955553f66951",
+			"authentication": {
+				"prefix": "",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"created": 1544916530184,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_37995e30ab5b441c978a14b313790f43",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544916530184,
+			"method": "GET",
+			"modified": 1544991808215,
+			"name": "Show",
+			"parameters": [],
+			"parentId": "fld_91a9e5a5c8024049b086e557da7e4e47",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local }}/books/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_f3f23d3019bf48d392f964d5986f61c5",
+			"authentication": {
+				"prefix": "",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t \"title\":\"Mitologia Nórdica\",\n   \"description\":\"Uma jornada da origem do universo até o fim do mundo.\",\n   \"type\":\"Mitologia\",\n   \"pagecount\":\"288\",\n   \"point\":\"10\",\n   \"book_cover_url\":\"https://cdn.pbrd.co/images/HRTZk2l.jpg\",\n\t\t\"user_id\": 3\n}"
+			},
+			"created": 1544916782874,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_082a3bdf7b2644a496bd38adfc9b91b1",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544915085585,
+			"method": "PUT",
+			"modified": 1544991704562,
+			"name": "Update",
+			"parameters": [],
+			"parentId": "fld_91a9e5a5c8024049b086e557da7e4e47",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local  }}/books/5",
+			"_type": "request"
+		},
+		{
+			"_id": "req_307f857f59ab416f8e89926876cf4331",
+			"authentication": {
+				"prefix": "",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1544916898043,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1544915807897,
+			"method": "DELETE",
+			"modified": 1544991016434,
+			"name": "Delete",
+			"parameters": [],
+			"parentId": "fld_91a9e5a5c8024049b086e557da7e4e47",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local  }}/books/1",
+			"_type": "request"
+		},
+		{
+			"_id": "req_cb5cf60a21da4f6b80e3e9275de909cd",
+			"authentication": {
+				"prefix": "",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1544918043102,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1544915085560,
+			"method": "GET",
+			"modified": 1544991812322,
+			"name": "index",
+			"parameters": [],
+			"parentId": "fld_9f6971cf63964e4e85b122df5de1c114",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local }}/books/1/authors",
+			"_type": "request"
+		},
+		{
+			"_id": "req_cda7629bae694587b6ef64a7117c8d1f",
+			"authentication": {
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t \"name\":\"Neil\",\n   \"surname\":\"Gaiman\",\n\t \"book_id\":\"1\"\n}"
+			},
+			"created": 1544918043105,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_082a3bdf7b2644a496bd38adfc9b91b1",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544915085610,
+			"method": "POST",
+			"modified": 1544989954381,
+			"name": "Create",
+			"parameters": [],
+			"parentId": "fld_9f6971cf63964e4e85b122df5de1c114",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local }}/books/2/authors",
+			"_type": "request"
+		},
+		{
+			"_id": "req_4eba8801401c4b17abd12a7e49343f70",
+			"authentication": {
+				"prefix": "",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"created": 1544918043106,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_37995e30ab5b441c978a14b313790f43",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544916530184,
+			"method": "GET",
+			"modified": 1544991810986,
+			"name": "Show",
+			"parameters": [],
+			"parentId": "fld_9f6971cf63964e4e85b122df5de1c114",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local }}/books/1/authors/2",
+			"_type": "request"
+		},
+		{
+			"_id": "req_d2b27cc8247e4df8bdcd83604c72feae",
+			"authentication": {
+				"prefix": "",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t \"name\":\"Neil\",\n   \"surname\":\"Gaiman\",\n\t \"book_id\":\"1\"\n}"
+			},
+			"created": 1544918043108,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_082a3bdf7b2644a496bd38adfc9b91b1",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1544915085585,
+			"method": "PUT",
+			"modified": 1544989845483,
+			"name": "Update",
+			"parameters": [],
+			"parentId": "fld_9f6971cf63964e4e85b122df5de1c114",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local  }}/books/1/authors/6",
+			"_type": "request"
+		},
+		{
+			"_id": "req_82b29b1413264add9bb9c4b5a521eefd",
+			"authentication": {
+				"prefix": "",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1544918043109,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1544915807897,
+			"method": "DELETE",
+			"modified": 1544989830977,
+			"name": "Delete",
+			"parameters": [],
+			"parentId": "fld_9f6971cf63964e4e85b122df5de1c114",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{ base_url_local  }}/books/1/authors/6",
+			"_type": "request"
+		}
+	]
+}
