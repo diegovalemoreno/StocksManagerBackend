@@ -1,8 +1,8 @@
 'use strict'
 
 const FavoriteStock = use('App/Models/FavoriteStock')
-var googleStocks = require('../../dist/index');
-
+//var googleStocks = require('../../dist/index');
+var yahooFinance = require('yahoo-finance');
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
 /** @typedef {import('@adonisjs/framework/src/View')} View */
@@ -20,8 +20,22 @@ class FavoriteStockController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async index ({ request, response, view }) {
+  async index({
+    request,
+    response,
+    view,
+    params
+  }) {
+    // const stock = await FavoriteStock.findOrFail(params.id)
+    console.log('aqui')
+    googleStocks(['AAPL']).then(data => {
+      return data;
+    }).catch(error => {
+      console.log(error)
+    })
   }
+  // return stock;
+
 
   /**
    * Render a form to be used for creating a new favoritestock.
@@ -32,8 +46,11 @@ class FavoriteStockController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async create ({ request, response, view }) {
-  }
+  async create({
+    request,
+    response,
+    view
+  }) {}
 
   /**
    * Create/save a new favoritestock.
@@ -43,14 +60,20 @@ class FavoriteStockController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async store ({ params, request }) {
+  async store({
+    params,
+    request
+  }) {
     const data = request.only([
       'symbol',
       'evaluationNote',
       'amount'
     ])
     console.log(params)
-    const stock = await FavoriteStock.create({ ...data, user_id: params.user_id })
+    const stock = await FavoriteStock.create({
+      ...data,
+      user_id: params.user_id
+    })
 
     return stock
   }
@@ -64,11 +87,21 @@ class FavoriteStockController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async show ({ params, request, response, view }) {
+  async show({
+    params,
+    request,
+    response,
+    view
+  }) {
     const stock = await FavoriteStock.findOrFail(params.id)
-
-    googleStocks(['AAPL'], function(error, data) {
-      console.log(data.toString());
+    console.log('aqui')
+    const promisse = await yahooFinance.quote({
+      symbol: 'EGIE3.SA',
+      from: '2012-01-01',
+      to: '2012-12-31',
+      // period: 'd'  // 'd' (daily), 'w' (weekly), 'm' (monthly), 'v' (dividends only)
+    }, function (err, quotes) {
+      console.log(promisse)
     });
 
     // googleStocks(['TSE:WJA', 'NASDAQ:GOOG', 'AAPL'], function(error, data) {
@@ -84,6 +117,22 @@ class FavoriteStockController {
     // return objSucessMessage
   }
 
+  async getPriceFromSymbol({
+    params,
+    request,
+    response,
+    view
+  }) {
+    // const stock = await FavoriteStock.findOrFail(params.symbol)
+    console.log('aqui')
+    const promisse = await yahooFinance.quote({
+      symbol: params.symbol.trim()
+    }, function (err, quotes) {
+
+    });
+
+    return promisse
+  }
   /**
    * Render a form to update an existing favoritestock.
    * GET favoritestocks/:id/edit
@@ -93,8 +142,12 @@ class FavoriteStockController {
    * @param {Response} ctx.response
    * @param {View} ctx.view
    */
-  async edit ({ params, request, response, view }) {
-  }
+  async edit({
+    params,
+    request,
+    response,
+    view
+  }) {}
 
   /**
    * Update favoritestock details.
@@ -104,8 +157,11 @@ class FavoriteStockController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async update ({ params, request, response }) {
-  }
+  async update({
+    params,
+    request,
+    response
+  }) {}
 
   /**
    * Delete a favoritestock with id.
@@ -115,8 +171,13 @@ class FavoriteStockController {
    * @param {Request} ctx.request
    * @param {Response} ctx.response
    */
-  async destroy ({ params, request, response }) {
-  }
+  async destroy({
+    params,
+    request,
+    response
+  }) {}
+
+
 }
 
 module.exports = FavoriteStockController
